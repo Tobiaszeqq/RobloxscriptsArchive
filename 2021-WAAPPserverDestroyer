@@ -1,6 +1,6 @@
-for _, v in pairs(workspace:GetDescendants()) do
-    if v:IsA("BasePart") then
-        workspace.GameService.UpdateObjectProperty:FireServer(v, "BrickColor", BrickColor.random())
-        workspace.GameService.UpdateObjectProperty:FireServer(v, "Velocity", Vector3.new(math.random(-50, 50), math.random(-50, 50), math.random(-50, 50)))
-    end
+for _,v in pairs(workspace:GetDescendants()) do
+  if v:IsA("BasePart") then
+  workspace.GameService.UpdateObjectProperty:FireServer(v,"BrickColor",BrickColor.random())
+    workspace.GameService.UpdateObjectProperty:FireServer(v,"Velocity",Vector3.new(math.random(-50,50),math.random(-50,50),math.random(-50,50))
+  end
 end
