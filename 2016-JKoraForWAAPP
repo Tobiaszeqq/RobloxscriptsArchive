@@ -1,0 +1,22 @@
+local a = workspace.GameService.UpdateObjectProperty
+-- jkora skybox
+a:FireServer(game.Lighting.Sky, "SkyboxBk", "rbxassetid://2897145648")
+a:FireServer(game.Lighting.Sky, "SkyboxDn", "rbxassetid://2897145648")
+a:FireServer(game.Lighting.Sky, "SkyboxFt", "rbxassetid://2897145648")
+a:FireServer(game.Lighting.Sky, "SkyboxLf", "rbxassetid://2897145648")
+a:FireServer(game.Lighting.Sky, "SkyboxRt", "rbxassetid://2897145648")
+a:FireServer(game.Lighting.Sky, "SkyboxUp", "rbxassetid://2897145648")
+a:FireServer(game.Lighting, "ClockTime", 5)
+while true do
+	for i, v in pairs(game:GetDescendants()) do
+	if v:IsA("BasePart") then
+		a:FireServer(v, "BrickColor", BrickColor.Random())
+	end
+end
+	for i, v in pairs(game:GetDescendants()) do
+	if v:IsA("Humanoid") then
+		a:FireServer(v, "Health", math.random(0, 100))
+	end
+end
+
+end
